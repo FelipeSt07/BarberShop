@@ -77,10 +77,40 @@
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div class="col">
           <div class="card shadow-sm">
-            <img src="https://i.ibb.co/XCNWQHD/principal.jpg">
+            <img id="imagen_a" src="imagenes/hair-wash.png">
             <div class="card-body">
-              <h5 class="card-title">Zapatos color cafe</h5>
-              <p class="card-text">$ 599.00</p>
+              <h5 id="card" class="card-title">Zapatos color cafe</h5>
+              <p id="card" class="card-text">$ 599.00</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="#" id="primary_c" class="btn btn-primary">Detalles</a>
+                </div>
+                <a href="#" id="success_c" class="btn btn-success">Agregar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img id="imagen" src="imagenes/plus-chico.png">
+            <div class="card-body">
+              <h5 id="card" class="card-title">Balsamo barba</h5>
+              <p id="card" class="card-text">$ 599.00</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="#" id="primary_c" class="btn btn-primary">Detalles</a>
+                </div>
+                <a href="#" id="success_c" class="btn btn-success">Agregar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img id="imagen" src="imagenes/skin-clear.jpg">
+            <div class="card-body">
+              <h5 id="card" class="card-title">Zapatos color cafe</h5>
+              <p id="card" class="card-text">$ 599.00</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="#" id="primary_c" class="btn btn-primary">Detalles</a>
@@ -94,8 +124,8 @@
           <div class="card shadow-sm">
             <img src="https://i.ibb.co/XCNWQHD/principal.jpg">
             <div class="card-body">
-              <h5 class="card-title">Zapatos color cafe</h5>
-              <p class="card-text">$ 599.00</p>
+              <h5 id="card" class="card-title">Zapatos color cafe</h5>
+              <p id="card" class="card-text">$ 599.00</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="#" id="primary_c" class="btn btn-primary">Detalles</a>
@@ -109,8 +139,8 @@
           <div class="card shadow-sm">
             <img src="https://i.ibb.co/XCNWQHD/principal.jpg">
             <div class="card-body">
-              <h5 class="card-title">Zapatos color cafe</h5>
-              <p class="card-text">$ 599.00</p>
+              <h5 id="card" class="card-title">Zapatos color cafe</h5>
+              <p id="card" class="card-text">$ 599.00</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="#" id="primary_c" class="btn btn-primary">Detalles</a>
@@ -120,7 +150,21 @@
             </div>
           </div>
         </div>
-        
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="https://i.ibb.co/XCNWQHD/principal.jpg">
+            <div class="card-body">
+              <h5 id="card" class="card-title">Zapatos color cafe</h5>
+              <p id="card" class="card-text">$ 599.00</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="#" id="primary_c" class="btn btn-primary">Detalles</a>
+                </div>
+                <a href="#" id="success_c" class="btn btn-success">Agregar</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
