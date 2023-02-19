@@ -1,13 +1,5 @@
 <?php
     include("conexion.php");
-
-    $con=conectar();
-    if (!$con) {
-        echo "no se conecto";
-        exit;
-    }else {
-        echo "conectado";
-    }
     // $cedula = $_POST['cedula'];
     // $fechnac = $_POST['fechnac'];
     // $pnombre = $_POST['pnombre'];
