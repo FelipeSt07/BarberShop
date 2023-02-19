@@ -54,6 +54,8 @@ a {
 @media (max-width:820px) {
     .menu {
         width: 100%;
+        padding: 0;
+
     }
 
     .text_nav {
@@ -67,6 +69,7 @@ a {
         width: 100%;
         padding: 0;
     }
+
     .logo {
         padding: 0 50px;
     }
@@ -74,13 +77,15 @@ a {
     #oculto {
         display: none;
     }
+
     #nav_oculto {
         display: none;
     }
+
     #titulo {
         font-size: 2rem;
     }
-    
+
 
 }
 
@@ -554,7 +559,7 @@ footer a {
     border-width: 1.5rem;
     border-top-color: #f9f9f9;
     margin-left: -1.5rem;
-} 
+}
 
 .testimonials-title {
     color: chocolate;
@@ -733,6 +738,7 @@ footer a {
     .derecha {
         width: 100%;
     }
+
     #maps {
         width: 100%;
 
