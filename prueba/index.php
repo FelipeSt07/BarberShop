@@ -34,10 +34,10 @@ include("conexion.php");
 
             <div class="nav" id="nav_oculto">
                 <div class="div barra" >
-                    <a href="login.html" id="oculto" ><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
+                    <a href="login.php" id="oculto" ><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
                 </div>
                 <div class="div barra" >
-                    <a href="productos.html" id="oculto"><i class="fa-solid fa-bag-shopping"></i>Productos</a>
+                    <a href="productos.php" id="oculto"><i class="fa-solid fa-bag-shopping"></i>Productos</a>
                 </div>
                 <div class="div">
                     <a href="" id="oculto"><i class="fa-solid fa-scissors"></i>Servicios</a>
