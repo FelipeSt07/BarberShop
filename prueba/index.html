@@ -13,30 +13,31 @@
 
 <body>
     <header class="header">
+
         <div class="menu">
 
-            <div class="left"></div>
-            <div class="btn-departamentos" id="btn-departamentos">
-                <div class="boton">
-                    <a href=""><i class="fa-solid fa-bars"></i></a>
+            <div class="left">
+                <div class="btn-departamentos" id="btn-departamentos">
+                    <div class="boton">
+                        <a href=""><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                </div>
+
+                <div class="logo">
+                    <img src="imagenes/barber-logo.png" alt="">
                 </div>
             </div>
 
-            <div class="logo">
-                <img src="imagenes/barber-logo.png" alt="">
-            </div>
-        </div>
 
-
-            <div class="nav">
-                <div class="div barra">
-                    <a href="login.html"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
+            <div class="nav" id="nav_oculto">
+                <div class="div barra" >
+                    <a href="login.html" id="oculto" ><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
                 </div>
-                <div class="div barra">
-                    <a href=""><i class="fa-solid fa-bag-shopping"></i>Productos</a>
+                <div class="div barra" >
+                    <a href="" id="oculto"><i class="fa-solid fa-bag-shopping"></i>Productos</a>
                 </div>
                 <div class="div">
-                    <a href=""><i class="fa-solid fa-scissors"></i>Servicios</a>
+                    <a href="" id="oculto"><i class="fa-solid fa-scissors"></i>Servicios</a>
                 </div>
             </div>
         </div>
@@ -60,7 +61,7 @@
 
     </header>
 
-    <div class="slider">
+    <div class="slider" id="ajuste">
         <ul>
             <li>
                 <img src="imagenes/slider2copia.jpg">
@@ -78,7 +79,7 @@
     </div>
 
     <section class="text">
-        <h1>BIENVENIDOS</h1>
+        <h1 id="titulo">BIENVENIDOS</h1>
         <p>Lograr que usted viva una experiencia desde su</p>
         <p>llegada hasta que se retira de nuestra Barbería,</p>
         <p>es nuestro compromiso y objetivo.</p>
@@ -93,14 +94,14 @@
 
             </div>
             <div class="column">
-                <img src="imagenes/mosaico4copia.jpg">
-                <img src="imagenes/mosaico5copia.jpg">
-                <img src="imagenes/mosaico6copia.jpg">
+                <img src="imagenes/mosaico4copia.jpg" id="img_oculto">
+                <img src="imagenes/mosaico5copia.jpg" id="img_oculto">
+                <img src="imagenes/mosaico6copia.jpg" id="img_oculto">
             </div>
             <div class="column">
-                <img src="imagenes/mosaico7copia.jpg">
-                <img src="imagenes/mosaico8copia.jpg">
-                <img src="imagenes/mosaico9copia.jpg">
+                <img src="imagenes/mosaico7copia.jpg" id="img_oculto">
+                <img src="imagenes/mosaico8copia.jpg" id="img_oculto">
+                <img src="imagenes/mosaico9copia.jpg" id="img_oculto">
 
             </div>
         </div>
@@ -150,7 +151,7 @@
         </div>
     </section>
 
-    
+
 
     <section class="contactos">
         <div class="izquierda">
@@ -171,8 +172,10 @@
 
         </div>
         <div class="derecha">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d997.2368477313419!2d-77.28100856557357!3d1.197182750317089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1675954202134!5m2!1ses-419!2sco" 
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d997.2368477313419!2d-77.28100856557357!3d1.197182750317089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1675954202134!5m2!1ses-419!2sco"
+                width="600" height="450"  id="maps" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 
