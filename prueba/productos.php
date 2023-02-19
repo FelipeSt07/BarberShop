@@ -62,6 +62,14 @@
 
   </header>
 
+  <div class="separador"></div>
+
+  <section class="text">
+        <h1 id="titulo">PRODUCTOS</h1>
+        <!-- <p>Lograr que usted viva una experiencia desde su</p>
+        <p>llegada hasta que se retira de nuestra Barbería,</p>
+        <p>es nuestro compromiso y objetivo.</p> -->
+    </section>
 
   <!--Contenido-->
   <main>
@@ -75,9 +83,9 @@
               <p class="card-text">$ 599.00</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a href="#" class="btn btn-primary">Detalles</a>
+                  <a href="#" id="primary_c" class="btn btn-primary">Detalles</a>
                 </div>
-                <a href="#" class="btn btn-success">Agregar</a>
+                <a href="#" id="success_c" class="btn btn-success">Agregar</a>
               </div>
             </div>
           </div>
@@ -90,9 +98,9 @@
               <p class="card-text">$ 599.00</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a href="#" class="btn btn-primary">Detalles</a>
+                  <a href="#" id="primary_c" class="btn btn-primary">Detalles</a>
                 </div>
-                <a href="#" class="btn btn-success">Agregar</a>
+                <a href="#" id="success_c" class="btn btn-success">Agregar</a>
               </div>
             </div>
           </div>
@@ -105,9 +113,9 @@
               <p class="card-text">$ 599.00</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a href="#" class="btn btn-primary">Detalles</a>
+                  <a href="#" id="primary_c" class="btn btn-primary">Detalles</a>
                 </div>
-                <a href="#" class="btn btn-success">Agregar</a>
+                <a href="#" id="success_c" class="btn btn-success">Agregar</a>
               </div>
             </div>
           </div>
