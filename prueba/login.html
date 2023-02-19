@@ -21,9 +21,9 @@
                 <img src="imagenes/twiter.png" alt="icono-Twiter">
                 <img src="imagenes/google.png" alt="icono-Google">
             </div>
-            <form id="login" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="input-group" method="post">
-                <input name="usuario" type="text" class="input-field" placeholder="Nombre de Usuario" required>
-                <input name="password" type="password" class="input-field" placeholder="Contraseña" required>
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="Nombre de Usuario" required>
+                <input type="password" class="input-field" placeholder="Contraseña" required>
                 <input type="checkbox" class="check-box"><span>Recordar Contraseña</span>
                 <button type="submit" class="submint-btn">Acceder</button>
             </form>
@@ -42,7 +42,6 @@
                 <button type="submit" class="submint-btn">Registrar</button>
             </form>
         </div>
-        <?php echo $mensaje;?>
     </div>
 
     <script>
@@ -62,5 +61,6 @@
             z.style.left = "120px";
         }
     </script>
+    
 </body>
 </html>

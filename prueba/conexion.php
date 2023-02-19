@@ -1,12 +1,11 @@
 <?php
-    $servidor = 'localhost';
-    $usuario = 'root';
-    $password ='';
-    $dbname = 'db_barberia';
+function conectar() {
+    $hostname = 'localhost';
+    $usuariodb = 'root';
+    $passworddb ='';
+    $dbname = 'clientes';
     
-        $conectar = mysqli_connect($servidor,$usuario,$password,$dbname);
+        $conectar = mysqli_connect($hostname,$usuariodb,$passworddb,$dbname);
         return $conectar;
-    if ($conectar->connect_error) {
-        die("Error al conectar la base de datos".$coencta->connect_error);
     }
 ?>

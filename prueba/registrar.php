@@ -1,13 +1,13 @@
-<!-- <?php
-    //include("conexion.php");
+<?php
+    include("conexion.php");
 
-    //$con=conectar();
-    //if (!$con) {
-        //echo "no se conecto";
-        //exit;
-    //}else {
-        //echo "conectado";
-    //}
+    $con=conectar();
+    if (!$con) {
+        echo "no se conecto";
+        exit;
+    }else {
+        echo "conectado";
+    }
     // $cedula = $_POST['cedula'];
     // $fechnac = $_POST['fechnac'];
     // $pnombre = $_POST['pnombre'];
@@ -29,4 +29,4 @@
     //     }else {
     //         echo "error";
     //     }
-?> -->
+?>
