@@ -82,8 +82,8 @@
           <div class="card shadow-sm">
             <img id="imagen_a" src="imagenes/hair-wash.png">
             <div class="card-body">
-              <h5 id="card" class="card-title">Zapatos color cafe</h5>
-              <p id="card" class="card-text">$ 599.00</p>
+              <h5 id="card" class="card-title">Hair Wash</h5>
+              <p id="card" class="card-text">$ 79.00</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="#" id="primary_c" class="btn btn-primary">Detalles</a>
@@ -98,7 +98,7 @@
             <img id="imagen" src="imagenes/plus-chico.png">
             <div class="card-body">
               <h5 id="card" class="card-title">Balsamo barba</h5>
-              <p id="card" class="card-text">$ 599.00</p>
+              <p id="card" class="card-text">$ 49.00</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="#" id="primary_c" class="btn btn-primary">Detalles</a>
@@ -112,8 +112,8 @@
           <div class="card shadow-sm">
             <img id="imagen" src="imagenes/skin-clear.jpg">
             <div class="card-body">
-              <h5 id="card" class="card-title">Zapatos color cafe</h5>
-              <p id="card" class="card-text">$ 599.00</p>
+              <h5 id="card" class="card-title">Skin Cleaner</h5>
+              <p id="card" class="card-text">$ 29.00</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="#" id="primary_c" class="btn btn-primary">Detalles</a>
@@ -127,8 +127,8 @@
           <div class="card shadow-sm">
             <img id="imagen" src="imagenes/champu.jpg">
             <div class="card-body">
-              <h5 id="card" class="card-title">Zapatos color cafe</h5>
-              <p id="card" class="card-text">$ 599.00</p>
+              <h5 id="card" class="card-title">Shampoo</h5>
+              <p id="card" class="card-text">$ 49.00</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="#" id="primary_c" class="btn btn-primary">Detalles</a>
@@ -142,8 +142,8 @@
           <div class="card shadow-sm">
             <img id="imagen" src="imagenes/maquina.jpg">
             <div class="card-body">
-              <h5 id="card" class="card-title">Zapatos color cafe</h5>
-              <p id="card" class="card-text">$ 599.00</p>
+              <h5 id="card" class="card-title">Maquina</h5>
+              <p id="card" class="card-text">$ 159.00</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="#" id="primary_c" class="btn btn-primary">Detalles</a>
@@ -157,8 +157,8 @@
           <div class="card shadow-sm">
             <img id="imagen" src="imagenes/peines.jpg">
             <div class="card-body">
-              <h5 id="card" class="card-title">Zapatos color cafe</h5>
-              <p id="card" class="card-text">$ 599.00</p>
+              <h5 id="card" class="card-title">Peines</h5>
+              <p id="card" class="card-text">$ 109.00</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="#" id="primary_c" class="btn btn-primary">Detalles</a>
