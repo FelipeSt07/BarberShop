@@ -303,7 +303,7 @@ main>.container {
 
 .grid .categorias {
     grid-area: categorias;
-    min-height: 300px;
+    /*min-height: 300px;*/
     overflow: auto;
 }
 

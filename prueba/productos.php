@@ -50,15 +50,9 @@
     <div class="contenedor contenedor-grid">
       <div class="grid" id="grid">
         <div class="categorias">
-          <a id="oculto_a" href="#">Solo Hoy</a>
-          <a id="oculto_a" href="#">Solo para Ti</a>
-          <a id="oculto_a" href="#">Tiendas Oficiales</a>
-          <a id="oculto_a" href="#">Vende en Linio</a>
-          <a id="oculto_a" href="#">Ayuda</a>
-          <a id="oculto_a" href="#">Historial</a>
-          <a id="oculto_a" href="#">Banco Falabella</a>
-          <a id="oculto_a" href="#">Falabella</a>
-          <a id="oculto_a" href="#">Ventas Telefonicas</a>
+          <a id="oculto_a" href="login.php">Iniciar Sesion</a>
+          <a id="oculto_a" href="productos.php">Productos</a>
+          <a id="oculto_a" href="#">Servicios</a>
         </div>
       </div>
     </div>
