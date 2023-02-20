@@ -26,7 +26,10 @@
         </div>
 
         <div class="logo">
-          <img src="imagenes/barber-logo.png" alt="">
+          <a href="index.php">
+            <img src="imagenes/barber-logo.png" alt="">
+          </a>
+          
         </div>
       </div>
 
@@ -122,7 +125,7 @@
         </div>
         <div class="col">
           <div class="card shadow-sm">
-            <img src="https://i.ibb.co/XCNWQHD/principal.jpg">
+            <img id="imagen" src="imagenes/champu.jpg">
             <div class="card-body">
               <h5 id="card" class="card-title">Zapatos color cafe</h5>
               <p id="card" class="card-text">$ 599.00</p>
@@ -137,7 +140,7 @@
         </div>
         <div class="col">
           <div class="card shadow-sm">
-            <img src="https://i.ibb.co/XCNWQHD/principal.jpg">
+            <img id="imagen" src="imagenes/maquina.jpg">
             <div class="card-body">
               <h5 id="card" class="card-title">Zapatos color cafe</h5>
               <p id="card" class="card-text">$ 599.00</p>
@@ -152,7 +155,7 @@
         </div>
         <div class="col">
           <div class="card shadow-sm">
-            <img src="https://i.ibb.co/XCNWQHD/principal.jpg">
+            <img id="imagen" src="imagenes/peines.jpg">
             <div class="card-body">
               <h5 id="card" class="card-title">Zapatos color cafe</h5>
               <p id="card" class="card-text">$ 599.00</p>
