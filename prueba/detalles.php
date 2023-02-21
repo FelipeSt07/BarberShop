@@ -1,7 +1,7 @@
 <?php
 
-require('config.config.php');
-require("config/conexion.php");
+include('config/config.php');
+include("config/conexion.php");
 $con = $db->conectar();
 
 $id = isset($_GET['id']) ? $_GET['id'] : '';
@@ -15,12 +15,10 @@ $token = isset($_GET['token']) ? $_GET['token'] : '';
     $token_tmp = hash_hmac('sha1' $id, KEY_TOKEN);
 }
  */
+ $conexion = conectar();
 
-
-
-$sql = $con->prepare("SELECT id,nombre,precio FROM  productos WHERE activo=1");
-$sql->execute();
-$resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+ $query = "SELECT idproducto, nombre, precio FROM `producto` WHERE estado=1";
+ $result = mysqli_query($conexion, $query);
 ?>
 
 <!DOCTYPE html>

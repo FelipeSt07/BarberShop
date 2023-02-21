@@ -4,8 +4,6 @@ $conexion = conectar();
 
 $query = "SELECT idproducto, nombre, precio FROM `producto` WHERE estado=1";
 $result = mysqli_query($conexion, $query);
-
-$producto = mysqli_fetch_assoc($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
