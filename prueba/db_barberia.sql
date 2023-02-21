@@ -95,5 +95,5 @@ ALTER TABLE `usuarioreg` ADD COLUMN username varchar(100) NOT NULL AFTER direcci
 INSERT INTO `usuarioreg`(`cedula`, `p_nombre`, `s_nombre`, `p_apellido`, `s_apellido`, `fechanac`, `direccion`, `username`, `telefono`, `email`, `clave`) VALUES ('1004597149','Jhon','Hector','Roque','Males','2002-10-28','Funes','jh777','317869','jhon@gmail.com','827ccb0eea8a706c4c34a16891f84e7b')
 INSERT INTO `usuarioreg`(`cedula`, `p_nombre`, `s_nombre`, `p_apellido`, `s_apellido`, `fechanac`, `direccion`, `username`, `telefono`, `email`, `clave`) VALUES ('1004','Luis','Felipe','Santacruz','Chinchajoa','2002-8-30','Pasto','felipest','313987','felipe@gmail.com','827ccb0eea8a706c4c34a16891f84e7b')
 #insercion productos
-INSERT INTO `producto`(`idproducto`, `nombre`, `descripcion`, `precio`, `estado`) VALUES ('777','gel','que bendicion','1000','activo')
-INSERT INTO `producto`(`idproducto`, `nombre`, `descripcion`, `precio`, `estado`) VALUES ('1054','crema','que bendicionx2','2000','activo')
+INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('gel','que bendicion','1000')
+INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('crema','que bendicionx2','2000')
