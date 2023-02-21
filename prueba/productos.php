@@ -81,12 +81,12 @@ $producto = mysqli_fetch_assoc($result);
   <main>
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <?php foreach ($resultado as $row) { ?>
+        <?php foreach ($result as $row) { ?>
           <div class="col">
             <div class="card shadow-sm">
               <?php 
               $id = $row['idproducto'];
-              $imagen = "imagenes/productos/"."1".".png";
+              $imagen = "imagenes/productos/".$id."/principal.png";
 
               if (!file_exists($imagen)) {
                 $imagen = "imagenes/no_photo.jpg";
@@ -98,9 +98,7 @@ $producto = mysqli_fetch_assoc($result);
                 <p id="card" class="card-text"><?php echo number_format($row['precio'],2,'.',',') ;?></p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a href="detalles.php?id=<?php echo $row['id']; ?>&token=<?php echo
-                       hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>" id="primary_c" 
-                       class="btn btn-primary">Detalles</a>
+                    <a href="">Detalles</a>
                   </div>
                   <a href="#" id="success_c" class="btn btn-success">Agregar</a>
                 </div>
