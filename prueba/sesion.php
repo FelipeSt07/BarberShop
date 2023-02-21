@@ -18,11 +18,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($password == $usuario['clave']) {
             //Iniciar sesion
             $_SESSION['username'] = $username;
-            header("location: prueba.php");
+            header("location: Viewprueba.php");
             exit;
         }
     }else {
-        header("location: login.php");
+        header("location: FormLogin.php");
     }
 }
 

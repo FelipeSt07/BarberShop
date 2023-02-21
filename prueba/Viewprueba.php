@@ -3,7 +3,7 @@ session_start();
 //verificar si el usuario inicio sesion
 if (!isset($_SESSION['username'])) {
     //Redirigir al usuario al inicio de sesion
-    header("location: login.php");
+    header("location: FormLogin.php");
     exit;
 }
 include("config/conexion.php");

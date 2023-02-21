@@ -36,10 +36,10 @@ include("config/conexion.php");
 
             <div class="nav" id="nav_oculto">
                 <div class="div barra" >
-                    <a href="login.php" id="oculto" ><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
+                    <a href="FormLogin.php" id="oculto" ><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
                 </div>
                 <div class="div barra" >
-                    <a href="productos.php" id="oculto"><i class="fa-solid fa-bag-shopping"></i>Productos</a>
+                    <a href="Productos.php" id="oculto"><i class="fa-solid fa-bag-shopping"></i>Productos</a>
                 </div>
                 <div class="div">
                     <a href="" id="oculto"><i class="fa-solid fa-scissors"></i>Servicios</a>
@@ -50,8 +50,8 @@ include("config/conexion.php");
         <div class="contenedor contenedor-grid">
             <div class="grid" id="grid">
                 <div class="categorias">
-                    <a href="login.php">Iniciar Sesion</a>
-                    <a href="productos.php">Productos</a>
+                    <a href="FormLogin.php">Iniciar Sesion</a>
+                    <a href="Productos.php">Productos</a>
                     <a href="#">Servicios</a>
                 </div>
             </div>
