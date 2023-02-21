@@ -7,21 +7,35 @@
 .container {
     width: 100%;
     height: 100%;
-    background-image: url(./imagenes/fondo.jpg);
+    background-image: url(../imagenes/fondo.jpg);
     background-position: center;
     background-size: cover;
     position: absolute;
 }
 
+.barra {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: center;
+    background: #fff;
+}
+
+.barra a img {
+    width: 100px;
+    height: 60px;
+}
+
 .form-box {
-    width: 400px;
-    height: 480px;
+    width: 500px;
+    height: 500px;
     position: relative;
-    margin: 6% auto;
+    margin: 1% auto;
     background: #fff;
     padding: 5px;
     border-radius: 8px;
     overflow: hidden;
+    top: 10px;
 }
 
 .button-box {
@@ -39,7 +53,7 @@
     border: 0;
     outline: none;
     position: relative;
-
+    font-size: 14px;
 }
 
 #elegir {
@@ -48,14 +62,18 @@
    position: absolute;
    width: 120px;
    height: 100%;
-   background: linear-gradient( to right, rgba(0, 0, 0, 0.1), rgba(0, 188, 212, 0.7));
+   background: linear-gradient( to right, rgba(255, 255, 255, 0.743), rgb(170, 108, 83));
    border-radius: 30px;
    transition: 0.8s;
+   font-size: 16px;
 }
 
 .redes-sociales {
+    position: absolute;
     margin: 15px auto;
     text-align: center;
+    width: 100%;
+    top: 80px;
 }
 
 .redes-sociales img {
@@ -67,10 +85,14 @@
 }
 
 .input-group {
-    top: 180px;
+    top: 150px;
     position: absolute;
-    width: 320px;
+    width: 410px;
     transition: 0.8s;
+}
+
+.input-group div {
+    margin: 1px auto;
 }
 
 .input-field {
@@ -83,15 +105,21 @@
     border-bottom: 2px solid #727675;
     outline: none;
     background: transparent;
+    font-size: 14px;
 }
 
 .registrar {
-    top: 110px;
-    width: 340px;
+    left: 600px;
 }
 
-.input-registrar {
-    width: 49%;
+.group-registrar {
+    display: flex;
+    flex-wrap: wrap;
+    width: 410px;
+}
+
+.div-registrar {
+    width: 48%;
 }
 
 .submint-btn {
@@ -100,29 +128,28 @@
     cursor: pointer;
     display: block;
     margin: auto;
-    background: linear-gradient( to right, rgba(0, 0, 0, 0.1), rgba(0, 188, 212, 0.7));
+    background: linear-gradient( to right,rgba(139, 139, 139, 0.54), rgb(170, 108, 83));
     border: 0px;
     outline: none;
     border-radius: 30px;
+    font-size: 18px;
 }
 
 .check-box {
     margin: 30px 10px 30px 0px;
 }
 
-span {
-    color: #757575;
-    font-size: 12px;
-    bottom: 64px;
-    position: absolute;
-}
-
 #login {
-    left: 40px;
+    left: 45px;
+    top: 170px;
 }
 
 #registrar {
-    left: 450px;
+    left: 600px;
+}
+
+.boton {
+    margin: 20px auto;
 }
 
 

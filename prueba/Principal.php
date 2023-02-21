@@ -1,7 +1,5 @@
 <?php
-require("config/conexion.phpconexion.php");
-$db = new Database();
-$con = $db->conectar();
+include("config/conexion.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

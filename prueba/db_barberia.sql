@@ -90,6 +90,13 @@ ALTER TABLE `carrito` ADD FOREIGN KEY (`usuario`) REFERENCES `usuarioreg` (`cedu
 ALTER TABLE `c_producto` ADD FOREIGN KEY (`carrito`) REFERENCES `carrito` (`idcarrito`);
 ALTER TABLE `c_producto` ADD FOREIGN KEY (`producto`) REFERENCES `producto` (`idproducto`);
 ALTER TABLE `factura` ADD FOREIGN KEY (`formapago`) REFERENCES `formapago` (`idformapago`);
-#Modificacion tabla usuarioreg 19/02->10:29
+#Modificacion tabla usuarioreg 19/02->10:29am
 ALTER TABLE `usuarioreg` ADD roll boolean default 0;
+#Modificacion tabla usuarioreg 19/02->10:34pm
+ALTER TABLE `usuarioreg` ADD COLUMN fechanac DATE NOT NULL AFTER s_apellido;
+ALTER TABLE `usuarioreg` ADD COLUMN direccion varchar(255) NOT NULL AFTER fechanac;
+ALTER TABLE `usuarioreg` ADD COLUMN username varchar(100) NOT NULL AFTER direccion;
+#insercion usuario de prueba
+INSERT INTO `usuarioreg`(`cedula`, `p_nombre`, `s_nombre`, `p_apellido`, `s_apellido`, `fechanac`, `direccion`, `username`, `telefono`, `email`, `clave`) VALUES ('1004597149','Jhon','Hector','Roque','Males','2002-10-28','Funes','jh777','317869','jhon@gmail.com','827ccb0eea8a706c4c34a16891f84e7b')
+INSERT INTO `usuarioreg`(`cedula`, `p_nombre`, `s_nombre`, `p_apellido`, `s_apellido`, `fechanac`, `direccion`, `username`, `telefono`, `email`, `clave`) VALUES ('1004','Luis','Felipe','Santacruz','Chinchajoa','2002-8-30','Pasto','felipest','313987','felipe@gmail.com','827ccb0eea8a706c4c34a16891f84e7b')
 

@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    display: flex;
+    width: auto;
+    height: 600px;
+    margin: 0 50px;
+    background: lightgrey;
+    flex-flow: column;
+    align-items: center;
+}
+
+h3 {
+    margin: 22px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    background-color: #fff;
+    margin: 10px 40px;
+    width: 600px;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.opciones {
+    margin: 2px 10px;
+    padding: 2px;
+    font-size: 18px;
+}
+
+.opciones a {
+    color: black;
+}
+
+.frase {
+    display: flex;
+    justify-content: left;
+    width: 600px;
+}
