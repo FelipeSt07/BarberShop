@@ -2,7 +2,6 @@
 
 require('config.config.php');
 require("config/conexion.php");
-$db = new Database();
 $con = $db->conectar();
 
 $id = isset($_GET['id']) ? $_GET['id'] : '';
