@@ -98,8 +98,3 @@ INSERT INTO `usuarioreg`(`cedula`, `p_nombre`, `s_nombre`, `p_apellido`, `s_apel
 #insercion productos
 INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('gel','que bendicion','1000')
 INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('crema','que bendicionx2','2000')
-=======
-
-
-
->>>>>>> Stashed changes
