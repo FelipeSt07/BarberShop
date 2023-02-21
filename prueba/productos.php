@@ -97,7 +97,7 @@ $producto = mysqli_fetch_assoc($result);
                 <h5 id="card" class="card-title"><?php echo $row['nombre'];?></h5>
                 <p id="card" class="card-text"><?php echo number_format($row['precio'],2,'.',',') ;?></p>
                 <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn btn-group">
+                  <div id="primary_c" class="btn btn-group">
                     <a href="" id="primary_c" >Detalles</a>
                   </div>
                   <a href="#" id="success_c" class="btn btn-success">Agregar</a>

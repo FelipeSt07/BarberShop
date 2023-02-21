@@ -534,6 +534,7 @@ footer a {
     color: #fff;
     background-color: chocolate;
     border-color: chocolate;
+    text-decoration: none;
 }
 
 #success_c {
