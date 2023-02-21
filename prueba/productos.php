@@ -26,7 +26,10 @@
         </div>
 
         <div class="logo">
-          <img src="imagenes/barber-logo.png" alt="">
+          <a href="index.php">
+            <img src="imagenes/barber-logo.png" alt="">
+          </a>
+          
         </div>
       </div>
 
@@ -47,21 +50,23 @@
     <div class="contenedor contenedor-grid">
       <div class="grid" id="grid">
         <div class="categorias">
-          <a id="oculto_a" href="#">Solo Hoy</a>
-          <a id="oculto_a" href="#">Solo para Ti</a>
-          <a id="oculto_a" href="#">Tiendas Oficiales</a>
-          <a id="oculto_a" href="#">Vende en Linio</a>
-          <a id="oculto_a" href="#">Ayuda</a>
-          <a id="oculto_a" href="#">Historial</a>
-          <a id="oculto_a" href="#">Banco Falabella</a>
-          <a id="oculto_a" href="#">Falabella</a>
-          <a id="oculto_a" href="#">Ventas Telefonicas</a>
+          <a id="oculto_a" href="login.php">Iniciar Sesion</a>
+          <a id="oculto_a" href="productos.php">Productos</a>
+          <a id="oculto_a" href="#">Servicios</a>
         </div>
       </div>
     </div>
 
   </header>
 
+  <div class="separador"></div>
+
+  <section class="text">
+        <h1 id="titulo">PRODUCTOS</h1>
+        <!-- <p>Lograr que usted viva una experiencia desde su</p>
+        <p>llegada hasta que se retira de nuestra Barbería,</p>
+        <p>es nuestro compromiso y objetivo.</p> -->
+    </section>
 
   <!--Contenido-->
   <main>
@@ -69,50 +74,94 @@
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div class="col">
           <div class="card shadow-sm">
-            <img src="https://i.ibb.co/XCNWQHD/principal.jpg">
+            <img id="imagen_a" src="imagenes/hair-wash.png">
             <div class="card-body">
-              <h5 class="card-title">Zapatos color cafe</h5>
-              <p class="card-text">$ 599.00</p>
+              <h5 id="card" class="card-title">Hair Wash</h5>
+              <p id="card" class="card-text">$ 79.00</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a href="#" class="btn btn-primary">Detalles</a>
+                  <a href="#" id="primary_c" class="btn btn-primary">Detalles</a>
                 </div>
-                <a href="#" class="btn btn-success">Agregar</a>
+                <a href="#" id="success_c" class="btn btn-success">Agregar</a>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card shadow-sm">
-            <img src="https://i.ibb.co/XCNWQHD/principal.jpg">
+            <img id="imagen" src="imagenes/plus-chico.png">
             <div class="card-body">
-              <h5 class="card-title">Zapatos color cafe</h5>
-              <p class="card-text">$ 599.00</p>
+              <h5 id="card" class="card-title">Balsamo barba</h5>
+              <p id="card" class="card-text">$ 49.00</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a href="#" class="btn btn-primary">Detalles</a>
+                  <a href="#" id="primary_c" class="btn btn-primary">Detalles</a>
                 </div>
-                <a href="#" class="btn btn-success">Agregar</a>
+                <a href="#" id="success_c" class="btn btn-success">Agregar</a>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card shadow-sm">
-            <img src="https://i.ibb.co/XCNWQHD/principal.jpg">
+            <img id="imagen" src="imagenes/skin-clear.jpg">
             <div class="card-body">
-              <h5 class="card-title">Zapatos color cafe</h5>
-              <p class="card-text">$ 599.00</p>
+              <h5 id="card" class="card-title">Skin Cleaner</h5>
+              <p id="card" class="card-text">$ 29.00</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a href="#" class="btn btn-primary">Detalles</a>
+                  <a href="#" id="primary_c" class="btn btn-primary">Detalles</a>
                 </div>
-                <a href="#" class="btn btn-success">Agregar</a>
+                <a href="#" id="success_c" class="btn btn-success">Agregar</a>
               </div>
             </div>
           </div>
         </div>
-        
+        <div class="col">
+          <div class="card shadow-sm">
+            <img id="imagen" src="imagenes/champu.jpg">
+            <div class="card-body">
+              <h5 id="card" class="card-title">Shampoo</h5>
+              <p id="card" class="card-text">$ 49.00</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="#" id="primary_c" class="btn btn-primary">Detalles</a>
+                </div>
+                <a href="#" id="success_c" class="btn btn-success">Agregar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img id="imagen" src="imagenes/maquina.jpg">
+            <div class="card-body">
+              <h5 id="card" class="card-title">Maquina</h5>
+              <p id="card" class="card-text">$ 159.00</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="#" id="primary_c" class="btn btn-primary">Detalles</a>
+                </div>
+                <a href="#" id="success_c" class="btn btn-success">Agregar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img id="imagen" src="imagenes/peines.jpg">
+            <div class="card-body">
+              <h5 id="card" class="card-title">Peines</h5>
+              <p id="card" class="card-text">$ 109.00</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="#" id="primary_c" class="btn btn-primary">Detalles</a>
+                </div>
+                <a href="#" id="success_c" class="btn btn-success">Agregar</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>

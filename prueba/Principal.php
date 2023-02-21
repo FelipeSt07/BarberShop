@@ -48,15 +48,9 @@ include("config/conexion.php");
         <div class="contenedor contenedor-grid">
             <div class="grid" id="grid">
                 <div class="categorias">
-                    <a href="#">Solo Hoy</a>
-                    <a href="#">Solo para Ti</a>
-                    <a href="#">Tiendas Oficiales</a>
-                    <a href="#">Vende en Linio</a>
-                    <a href="#">Ayuda</a>
-                    <a href="#">Historial</a>
-                    <a href="#">Banco Falabella</a>
-                    <a href="#">Falabella</a>
-                    <a href="#">Ventas Telefonicas</a>
+                    <a href="login.php">Iniciar Sesion</a>
+                    <a href="productos.php">Productos</a>
+                    <a href="#">Servicios</a>
                 </div>
             </div>
         </div>
