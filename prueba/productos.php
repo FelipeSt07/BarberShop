@@ -29,7 +29,7 @@
           <a href="index.php">
             <img src="imagenes/barber-logo.png" alt="">
           </a>
-          
+
         </div>
       </div>
 
@@ -62,11 +62,11 @@
   <div class="separador"></div>
 
   <section class="text">
-        <h1 id="titulo">PRODUCTOS</h1>
-        <!-- <p>Lograr que usted viva una experiencia desde su</p>
+    <h1 id="titulo">PRODUCTOS</h1>
+    <!-- <p>Lograr que usted viva una experiencia desde su</p>
         <p>llegada hasta que se retira de nuestra Barbería,</p>
         <p>es nuestro compromiso y objetivo.</p> -->
-    </section>
+  </section>
 
   <!--Contenido-->
   <main>
@@ -80,7 +80,9 @@
               <p id="card" class="card-text">$ 79.00</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a href="#" id="primary_c" class="btn btn-primary">Detalles</a>
+                  <a href="detalles.php?id=<?php echo $row['id']; ?>&token=<?php echo
+                       hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>" id="primary_c" 
+                       class="btn btn-primary">Detalles</a>
                 </div>
                 <a href="#" id="success_c" class="btn btn-success">Agregar</a>
               </div>
@@ -169,7 +171,7 @@
 
   <footer>
     <section>
-      <a href="#titulo">Ir al comienzo</a>
+      <a href="login.php">Ir al comienzo</a>
     </section>
     <p>Copyright 2023</p>
   </footer>
