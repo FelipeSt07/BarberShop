@@ -1,24 +1,22 @@
 <?php
     include("conexion.php");
-    // $cedula = $_POST['cedula'];
-    // $fechnac = $_POST['fechnac'];
-    // $pnombre = $_POST['pnombre'];
-    // $snombre = $_POST['snombre'];
-    // $papellido = $_POST['papellido'];
-    // $sapellido = $_POST['sapellido'];
-    // $direccion = $_POST['direccion'];
-    // $barrio = $_POST['barrio'];
-    // $ciudad = $_POST['ciudad'];
-    // $telefono = $_POST['telefono'];
-    // $correo = $_POST['correo'];
+    $conexion = conectar();
 
-    // $consulta = "INSERT INTO clientes(identificacion, pri-nombre, seg-nombre, pri-apellido, seg-apellido, fech-nacimiento, direccion, barrio, ciudad, telefono, correo) 
-    // VALUES ('$cedula','$pnombre','$snombre','$papellido','$sapellido','$fechnac','$direccion','$barrio','$ciudad','$telefono','$correo')";
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $nombre = $_POST['nombre'];
+    $apellido = $_POST['apellido'];
+    $cedula = $_POST['identificacion'];
+    $fecha = $_POST['fechanac'];
+    $telefono = $_POST['telefono'];
+    $usuario = $_POST['usuario'];
+    $correo = $_POST['correo'];
+    $confcorreo = $_POST['confcorreo'];
+    $clave = md5($_POST['clave']);
+    $confclave = md5($_POST['confclave']);
 
-    // $resultado = mysqli_query($conex, $consulta);
-    //     if ($resultado) {
-    //         echo "registrado";
-    //     }else {
-    //         echo "error";
-    //     }
+    
+
+
+
+    }
 ?>
