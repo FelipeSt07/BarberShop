@@ -39,39 +39,33 @@
             <form action="registrar.php" id="registrar" class="input-group registrar" method="post">
                 <div class="group-registrar">
                     <div class="div-registrar">
-                            <input type="text" class="input-field" placeholder="Primer Nombre" required id="pnombre">
+                        <input name="nombre" type="text" class="input-field" placeholder="Nombre" required id="pnombre">
                     </div>
                     <div class="div-registrar">
-                        <input type="text" class="input-field" placeholder="Segundo Nombre" required id="snombre">
+                        <input name="apellido" type="text" class="input-field" placeholder="Apellido" required id="snombre">
                     </div>
                     <div class="div-registrar">
-                        <input type="text" class="input-field" placeholder="Primer Apellido" required id="papellido">
+                        <input name="identificacion" type="text" class="input-field" placeholder="Identificacion" required id="papellido">
                     </div>
                     <div class="div-registrar">
-                        <input type="text" class="input-field" placeholder="Segundo Apellido" required id="sapelido">
+                        <input name="fechanac" type="date" class="input-field" placeholder="Fecha de Nacimiento" required id="sapelido">
                     </div>
                     <div class="div-registrar">
-                        <input type="text" class="input-field" placeholder="Identificacion" required id="cedula">
+                        <input name="telefono" type="text" class="input-field" placeholder="Telefono" required id="cedula">
                     </div>
                     <div class="div-registrar">
-                        <input type="date" class="input-field" placeholder="Fecha de Nacimiento" required id="fechnac">
+                        <input name="usuario" type="text" class="input-field" placeholder="Nombre de usuario" required id="fechnac">
                     </div>
                     <div class="div-registrar">
-                        <input type="text" class="input-field" placeholder="Direccion Completa" required id="Direccion">
+                        <input name="correo" type="email" class="input-field" placeholder="Correo" required id="Direccion">
                         </div>
                     <div class="div-registrar">
-                        <input type="text" class="input-field" placeholder="Nombre de Usuario" required id="ciudad">
+                        <input name="confcorreo" type="email" class="input-field" placeholder="Confirmacion Correo" required id="ciudad">
                     </div>
                     <div class="div-registrar">
-                        <input type="text" class="input-field" placeholder="Telefono" required id="telefono">                    </div>
+                        <input name="clave" type="password" class="input-field" placeholder="Contraseña" required id="telefono">                    </div>
                     <div class="div-registrar">
-                        <input type="email" class="input-field" placeholder="Correo" required id="correo">
-                    </div>
-                    <div class="div-registrar">
-                        <input type="password" class="input-field" placeholder="Contraseña" required id="correo">
-                    </div>
-                    <div class="div-registrar">
-                        <input type="password" class="input-field" placeholder="Confirmar contraseña" required id="correo">
+                        <input name="confclave" type="password" class="input-field" placeholder="Confirmacion contraseña" required id="correo">
                     </div>
                 </div>
                     <input type="checkbox" class="check-box"><span>Acepto los terminos y condiciones</span>
@@ -105,6 +99,8 @@
             l.style.margin = "0px 45px";
         }
     </script>
+
+
     
 </body>
 </html>
