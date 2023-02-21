@@ -2,23 +2,39 @@
 
 include('config/config.php');
 include("config/conexion.php");
-$con = $db->conectar();
-
-$id = isset($_GET['id']) ? $_GET['id'] : '';
+$conexion = conectar();
+$id = isset($_GET['idproducto']) ? $_GET['idproducto'] : '';
 $token = isset($_GET['token']) ? $_GET['token'] : '';
 
-/* if($id == '' || $token == ''){
+if ($id == '' || $token == '') {
     echo 'Error al procesar la petición';
     exit;
 } else {
 
-    $token_tmp = hash_hmac('sha1' $id, KEY_TOKEN);
-}
- */
- $conexion = conectar();
+    $token_tmp = hash_hmac('sha1', $id, KEY_TOKEN);
 
- $query = "SELECT idproducto, nombre, precio FROM `producto` WHERE estado=1";
- $result = mysqli_query($conexion, $query);
+
+    if ($token == $token_tmp) {
+
+        $query = "SELECT count(idproducto) FROM `producto` WHERE idproducto='$id' AND estado=1";
+        $result = mysqli_query($conexion, $query);
+        if (mysqli_num_rows($result) > 0) {
+            $query = "SELECT nombre, descripcion, precio FROM `producto` WHERE idproducto='$id' AND estado=1
+            LIMIT 1";
+            $result = mysqli_query($conexion, $query);
+            $row = mysqli_fetch_assoc($result);
+            $nombre = $row['nombre'];
+            $descripcion = $row['descripcion'];
+            $precio = $row['precio'];
+
+        }
+
+    } else {
+        echo 'Error al procesar la petición';
+        exit;
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -99,7 +115,10 @@ $token = isset($_GET['token']) ? $_GET['token'] : '';
                     <img id="imagen_a" src="imagenes/hair-wash.png">
                 </div>
                 <div class="col-md-6 order-md-2">
-                    
+                    <h2><?php echo $nombre; ?></h2>
+                    <h2><?php echo MONEDA . $precio; ?></h2>
+
+
                 </div>
             </div>
         </div>
