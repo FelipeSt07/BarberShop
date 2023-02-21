@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($password == $usuario['clave']) {
             //Iniciar sesion
             $_SESSION['username'] = $username;
-            header("location: Viewprueba.php");
+            header("location: index.php");
             exit;
         }
     }else {
