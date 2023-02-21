@@ -14,9 +14,6 @@
     $clave = md5($_POST['clave']);
     $confclave = md5($_POST['confclave']);
 
-    
-
-
-
     }
+    
 ?>
