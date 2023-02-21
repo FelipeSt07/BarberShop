@@ -45,10 +45,10 @@ $producto = mysqli_fetch_assoc($result);
 
       <div class="nav_p" id="nav_p_oculto">
         <div class="div barra">
-          <a href="login.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
+          <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
         </div>
         <div class="div barra">
-          <a href="productos.php" id="oculto"><i class="fa-solid fa-bag-shopping"></i>Productos</a>
+          <a href="Productos.php" id="oculto"><i class="fa-solid fa-bag-shopping"></i>Productos</a>
         </div>
         <div class="div">
           <a href="" id="oculto"><i class="fa-solid fa-scissors"></i>Servicios</a>
