@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = md5($_POST['password']);
 
     //buscar el usuario en la base de datos
-    $query = "SELECT * FROM `usuarioreg` WHERE `username`='$username' and `clave`='$password'";
+    $query = "SELECT * FROM `usuarioreg` WHERE `usuario`='$username' and `clave`='$password'";
     $result = mysqli_query($conexion, $query);
 
     if (mysqli_num_rows($result) == 1) {
