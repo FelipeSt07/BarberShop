@@ -1,42 +1,56 @@
 <?php
 
-include('config/config.php');
+include("config/config.php");
 include("config/conexion.php");
 $conexion = conectar();
-$id = isset($_GET['idproducto']) ? $_GET['idproducto'] : '';
+
+$id = isset($_GET['id']) ? $_GET['id'] : '';
 $token = isset($_GET['token']) ? $_GET['token'] : '';
 
 if ($id == '' || $token == '') {
     echo 'Error al procesar la petición';
     exit;
 } else {
-
     $token_tmp = hash_hmac('sha1', $id, KEY_TOKEN);
-
 
     if ($token == $token_tmp) {
 
         $query = "SELECT count(idproducto) FROM `producto` WHERE idproducto='$id' AND estado=1";
         $result = mysqli_query($conexion, $query);
         if (mysqli_num_rows($result) > 0) {
-            $query = "SELECT nombre, descripcion, precio FROM `producto` WHERE idproducto='$id' AND estado=1
+            $query = "SELECT nombre, descripcion, precio, descuento FROM `producto` WHERE idproducto='$id' AND estado=1
             LIMIT 1";
             $result = mysqli_query($conexion, $query);
             $row = mysqli_fetch_assoc($result);
             $nombre = $row['nombre'];
             $descripcion = $row['descripcion'];
             $precio = $row['precio'];
+            $descuento = $row['descuento'];
+            $precio_desc = $precio - (($precio * $descuento) / 100);
+            $dir_images = 'imagenes/productos/'. $id . '/';
 
-        }
+            $rutaImg = $dir_images .'principal.png';
+            
+            if (!file_exists($rutaImg)) {
+                $rutaImg = 'imagenes/no-photo.jpg';
+            }
 
+            $images = array();
+            $dir = dir($dir_images);
+
+            while (($archivo = $dir->read()) != false) {
+                if($archivo != 'principal.png' && (strpos($archivo, 'jpg')) || (strpos($archivo, 'png'))) {
+                    $images[] = $dir_images.$archivo;
+                }
+            }
+            $dir->close();
     } else {
         echo 'Error al procesar la petición';
         exit;
     }
+    }
 }
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,10 +89,10 @@ if ($id == '' || $token == '') {
 
             <div class="nav_p" id="nav_p_oculto">
                 <div class="div barra">
-                    <a href="login.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
+                    <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
                 </div>
                 <div class="div barra">
-                    <a href="productos.php" id="oculto"><i class="fa-solid fa-bag-shopping"></i>Productos</a>
+                    <a href="Productos.php" id="oculto"><i class="fa-solid fa-bag-shopping"></i>Productos</a>
                 </div>
                 <div class="div">
                     <a href="" id="oculto"><i class="fa-solid fa-scissors"></i>Servicios</a>
@@ -112,12 +126,19 @@ if ($id == '' || $token == '') {
         <div class="container">
             <div class="row">
                 <div class="col-md-6 order-md-1">
-                    <img id="imagen_a" src="imagenes/hair-wash.png">
+                    <img id="imagen_a" src="<?php echo $rutaImg ?>">
                 </div>
                 <div class="col-md-6 order-md-2">
                     <h2><?php echo $nombre; ?></h2>
-                    <h2><?php echo MONEDA . $precio; ?></h2>
+                    <h2><?php echo MONEDA . number_format($precio, 2,'.',','); ?></h2>
+                    <p class="lead">
+                        <?php echo $descripcion; ?>
+                    </p>
 
+                    <div class="d-grid gap-3 col-10">
+                        <button class="btn btn-primary" type="button" >Comprar Ahora</button>
+                        <button class="btn btn-outline-primary" type="button" >Agregar al carrito</button>
+                    </div>
 
                 </div>
             </div>
@@ -127,21 +148,15 @@ if ($id == '' || $token == '') {
 
     <footer>
         <section>
-            <a href="login.php">Ir al comienzo</a>
+            <a href="index.php">Ir al comienzo</a>
         </section>
         <p>Copyright 2023</p>
     </footer>
-
-
     <script src="https://kit.fontawesome.com/7a4ffadb8c.js" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-
-
-
 </body>
-
 </html>

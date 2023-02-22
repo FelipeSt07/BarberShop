@@ -1,5 +1,5 @@
 <?php
-include('config/config.php');
+require('config/config.php');
 include("config/conexion.php");
 $conexion = conectar();
 
@@ -97,7 +97,7 @@ $result = mysqli_query($conexion, $query);
                 <p id="card" class="card-text"><?php echo number_format($row['precio'],2,'.',',') ;?></p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div >
-                    <a href="detalles.php?id=<?php echo $row['idproducto']; ?>&token=<?php echo
+                    <a href="detalles.php? id=<?php echo $row['idproducto'];?>&token=<?php echo
                     hash_hmac('sha1', $row['idproducto'], KEY_TOKEN); ?>" class="btn btn-group" 
                     id="primary_c">Detalles</a>
                   </div>

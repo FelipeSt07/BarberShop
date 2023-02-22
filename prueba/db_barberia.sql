@@ -97,3 +97,5 @@ INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('gel','que ben
 INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('crema','que bendicionx2','2000')
 INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('gel','que bendicion','1000')
 INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('crema','que bendicionx2','2000')
+#Modificacion 15:30 21/02/2023
+ALTER TABLE `producto` ADD descuento TINYINT(3) default 0;
