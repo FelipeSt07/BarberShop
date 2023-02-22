@@ -136,8 +136,8 @@ if ($id == '' || $token == '') {
                     </p>
 
                     <div class="d-grid gap-3 col-10">
-                        <button class="btn btn-primary" type="button" >Comprar Ahora</button>
-                        <button class="btn btn-outline-primary" type="button" >Agregar al carrito</button>
+                        <button id="primary_c" class="btn btn-primary" type="button" >Comprar Ahora</button>
+                        <button id="success_c" class="btn btn-outline-primary" type="button" >Agregar al carrito</button>
                     </div>
 
                 </div>
