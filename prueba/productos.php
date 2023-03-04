@@ -58,7 +58,7 @@ $result = mysqli_query($conexion, $query);
     <div class="contenedor contenedor-grid">
       <div class="grid" id="grid">
         <div class="categorias">
-          <a id="oculto_a" href="login.php">Iniciar Sesion</a>
+          <a id="oculto_a" href="FormLogin.php">Iniciar Sesion</a>
           <a id="oculto_a" href="productos.php">Productos</a>
           <a id="oculto_a" href="#">Servicios</a>
         </div>

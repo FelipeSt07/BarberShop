@@ -372,6 +372,14 @@ a {
     top: 10px;
 }
 
+@media (max-width:375px) {
+
+    .form-box {
+        width: 100%;
+    }
+
+}
+
 .button-box {
     width: 240px;
     margin: 15px auto;
@@ -429,6 +437,15 @@ a {
     margin: 1px auto;
 }
 
+@media (max-width:375px) {
+
+    .input-group {
+        width: 275px;
+    }
+
+}
+
+
 .input-field {
     width: 100%;
     padding: 10px 0;
@@ -450,6 +467,14 @@ a {
     display: flex;
     flex-wrap: wrap;
     width: 410px;
+}
+
+@media (max-width:375px) {
+
+    .group-registrar {
+        width: 100%;
+    }
+
 }
 
 .div-registrar {
