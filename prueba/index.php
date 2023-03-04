@@ -41,8 +41,11 @@ include("config/conexion.php");
                 <div class="div barra">
                     <a href="" id="oculto"><i class="fa-solid fa-scissors"></i>Servicios</a>
                 </div>
-                <div class="div">
+                <div class="div barra">
                     <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
+                </div>
+                <div class="div">
+                    <a href="FormLogin.php" id="oculto"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
             </div>
         </div>
