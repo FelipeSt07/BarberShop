@@ -35,14 +35,14 @@ include("config/conexion.php");
 
 
             <div class="nav" id="nav_oculto">
-                <div class="div barra" >
-                    <a href="FormLogin.php" id="oculto" ><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
-                </div>
-                <div class="div barra" >
+                <div class="div barra">
                     <a href="Productos.php" id="oculto"><i class="fa-solid fa-bag-shopping"></i>Productos</a>
                 </div>
-                <div class="div">
+                <div class="div barra">
                     <a href="" id="oculto"><i class="fa-solid fa-scissors"></i>Servicios</a>
+                </div>
+                <div class="div">
+                    <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
                 </div>
             </div>
         </div>
@@ -173,7 +173,7 @@ include("config/conexion.php");
         <div class="derecha">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d997.2368477313419!2d-77.28100856557357!3d1.197182750317089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1675954202134!5m2!1ses-419!2sco"
-                width="600" height="450"  id="maps" style="border:0;" allowfullscreen="" loading="lazy"
+                width="600" height="450" id="maps" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>

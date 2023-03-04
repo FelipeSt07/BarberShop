@@ -35,6 +35,10 @@ a {
     text-decoration: none;
 }
 
+#oculto_b {
+    text-decoration: none;
+}
+
 main>.container {
     padding: 30px 0;
 }
@@ -133,7 +137,7 @@ main>.container {
     color: #fff;
     padding: 7px;
     border-radius: 3px;
-    display: flex;
+    display: none;
     align-items: flex-end;
     border: 1px solid transparent;
     font-size: 12px;
@@ -141,6 +145,7 @@ main>.container {
 }
 
 .btn-departamentos i {
+    display: none;
     margin-left: 20px;
     position: relative;
     bottom: 3px;
@@ -156,6 +161,19 @@ main>.container {
     font-weight: bold;
 }
 
+@media (max-width:820px) {
+
+    .btn-departamentos {
+        display: flex;
+
+    }
+
+    .btn-departamentos i {
+        display: block;
+
+    }
+    
+}
 
 /*-----------------*/
 /*       LOGO      */
@@ -409,11 +427,10 @@ footer a {
 }
 
 
-@media (max-width:820px) and (min-width:380px) {
+
+@media (max-width:375px) {
     footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
+        position: relative;
     }
 }
 

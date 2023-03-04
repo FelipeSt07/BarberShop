@@ -1,22 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
     <link rel="stylesheet" href="css/login.css">
+    <link rel="shortcut icon" href="imagenes/barber-shop.svg">
+    <title>Barberia Harlan</title>
 </head>
+
 <body>
-    <div class="container">
-        <div class="barra" >
-            <a href="index.php"><img src="imagenes/barber-logo.png" alt=""></a>
+    <header class="header">
+
+        <div class="menu">
+
+            <div class="left">
+                <div class="btn-departamentos" id="btn-departamentos">
+                    <div class="boton">
+                        <a href=""><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                </div>
+
+                <div class="logo">
+                    <a href="index.php">
+                        <img src="imagenes/barber-logo.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="nav" id="nav_oculto">
+                <div class="div barra">
+                    <a href="Productos.php" id="oculto"><i class="fa-solid fa-bag-shopping"></i>Productos</a>
+                </div>
+                <div class="div barra">
+                    <a href="" id="oculto"><i class="fa-solid fa-scissors"></i>Servicios</a>
+                </div>
+                <div class="div">
+                    <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
+                </div>
+            </div>
         </div>
-        <div class="form-box" id="contenedor" >
+
+        <div class="contenedor contenedor-grid">
+            <div class="grid" id="grid">
+                <div class="categorias">
+                    <a href="FormLogin.php">Iniciar Sesion</a>
+                    <a href="Productos.php">Productos</a>
+                    <a href="#">Servicios</a>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+    <div class="container">
+
+        <div class="form-box" id="contenedor">
             <div class="button-box">
                 <div id="elegir"></div>
-                    <button type="button" class="toggle-btn" onclick="login()">Iniciar Sesion</button>
-                    <button type="button" class="toggle-btn" onclick="registrar()">Registrar</button>
+                <button type="button" class="toggle-btn" onclick="login()">Iniciar Sesion</button>
+                <button type="button" class="toggle-btn" onclick="registrar()">Registrar</button>
             </div>
             <div class="redes-sociales">
                 <img src="imagenes/facebook.png" alt="icono-Facebook">
@@ -33,7 +79,7 @@
                 <div>
                     <input type="checkbox" class="check-box"><span>Recordar Contraseña</span>
                 </div>
-                    <button name="aacceder" type="submit" class="submint-btn boton">Acceder</button>
+                <button name="aacceder" type="submit" class="submint-btn boton">Acceder</button>
             </form>
             <!-- Formulario de registro -->
             <form action="registrar.php" id="registrar" class="input-group registrar" method="post">
@@ -42,38 +88,48 @@
                         <input name="nombre" type="text" class="input-field" placeholder="Nombre" required id="pnombre">
                     </div>
                     <div class="div-registrar">
-                        <input name="apellido" type="text" class="input-field" placeholder="Apellido" required id="snombre">
+                        <input name="apellido" type="text" class="input-field" placeholder="Apellido" required
+                            id="snombre">
                     </div>
                     <div class="div-registrar">
-                        <input name="identificacion" type="text" class="input-field" placeholder="Identificacion" required id="papellido">
+                        <input name="identificacion" type="text" class="input-field" placeholder="Identificacion"
+                            required id="papellido">
                     </div>
                     <div class="div-registrar">
-                        <input name="fechanac" type="date" class="input-field" placeholder="Fecha de Nacimiento" required id="sapelido">
+                        <input name="fechanac" type="date" class="input-field" placeholder="Fecha de Nacimiento"
+                            required id="sapelido">
                     </div>
                     <div class="div-registrar">
-                        <input name="telefono" type="text" class="input-field" placeholder="Telefono" required id="cedula">
+                        <input name="telefono" type="text" class="input-field" placeholder="Telefono" required
+                            id="cedula">
                     </div>
                     <div class="div-registrar">
-                        <input name="usuario" type="text" class="input-field" placeholder="Nombre de usuario" required id="fechnac">
+                        <input name="usuario" type="text" class="input-field" placeholder="Nombre de usuario" required
+                            id="fechnac">
                     </div>
                     <div class="div-registrar">
-                        <input name="correo" type="email" class="input-field" placeholder="Correo" required id="Direccion">
-                        </div>
-                    <div class="div-registrar">
-                        <input name="confcorreo" type="email" class="input-field" placeholder="Confirmacion Correo" required id="ciudad">
+                        <input name="correo" type="email" class="input-field" placeholder="Correo" required
+                            id="Direccion">
                     </div>
                     <div class="div-registrar">
-                        <input name="clave" type="password" class="input-field" placeholder="Contraseña" required id="telefono">                    </div>
+                        <input name="confcorreo" type="email" class="input-field" placeholder="Confirmacion Correo"
+                            required id="ciudad">
+                    </div>
                     <div class="div-registrar">
-                        <input name="confclave" type="password" class="input-field" placeholder="Confirmacion contraseña" required id="correo">
+                        <input name="clave" type="password" class="input-field" placeholder="Contraseña" required
+                            id="telefono">
+                    </div>
+                    <div class="div-registrar">
+                        <input name="confclave" type="password" class="input-field"
+                            placeholder="Confirmacion contraseña" required id="correo">
                     </div>
                 </div>
-                    <input type="checkbox" class="check-box"><span>Acepto los terminos y condiciones</span>
-                    <button type="submit" class="submint-btn">Registrar</button>
+                <input type="checkbox" class="check-box"><span>Acepto los terminos y condiciones</span>
+                <button type="submit" class="submint-btn">Registrar</button>
             </form>
         </div>
     </div>
-    
+
     <script>
         var x = document.getElementById("login");
         var y = document.getElementById("registrar");
@@ -101,6 +157,9 @@
     </script>
 
 
-    
+    <script src="https://kit.fontawesome.com/7a4ffadb8c.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+
 </body>
+
 </html>

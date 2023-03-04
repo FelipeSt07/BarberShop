@@ -44,13 +44,13 @@ $result = mysqli_query($conexion, $query);
 
       <div class="nav_p" id="nav_p_oculto">
         <div class="div barra">
-          <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
-        </div>
-        <div class="div barra">
           <a href="Productos.php" id="oculto"><i class="fa-solid fa-bag-shopping"></i>Productos</a>
         </div>
-        <div class="div">
+        <div class="div barra">
           <a href="" id="oculto"><i class="fa-solid fa-scissors"></i>Servicios</a>
+        </div>
+        <div class="div">
+          <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
         </div>
       </div>
     </div>
@@ -83,23 +83,27 @@ $result = mysqli_query($conexion, $query);
         <?php foreach ($result as $row) { ?>
           <div class="col">
             <div class="card shadow-sm">
-              <?php 
+              <?php
               $id = $row['idproducto'];
-              $imagen = "imagenes/productos/".$id."/principal.png";
+              $imagen = "imagenes/productos/" . $id . "/principal.png";
 
               if (!file_exists($imagen)) {
                 $imagen = "imagenes/no_photo.jpg";
               }
               ?>
-              <img id="imagen_a" src="<?php echo $imagen;?>">
+              <img id="imagen_a" src="<?php echo $imagen; ?>">
               <div class="card-body">
-                <h5 id="card" class="card-title"><?php echo $row['nombre'];?></h5>
-                <p id="card" class="card-text"><?php echo number_format($row['precio'],2,'.',',') ;?></p>
+                <h5 id="card" class="card-title">
+                  <?php echo $row['nombre']; ?>
+                </h5>
+                <p id="card" class="card-text">
+                  <?php echo number_format($row['precio'], 2, '.', ','); ?>
+                </p>
                 <div class="d-flex justify-content-between align-items-center">
-                  <div >
-                    <a href="detalles.php? id=<?php echo $row['idproducto'];?>&token=<?php echo
-                    hash_hmac('sha1', $row['idproducto'], KEY_TOKEN); ?>" class="btn btn-group" 
-                    id="primary_c">Detalles</a>
+                  <div>
+                    <a href="detalles.php? id=<?php echo $row['idproducto']; ?>&token=<?php echo
+                        hash_hmac('sha1', $row['idproducto'], KEY_TOKEN); ?>" class="btn btn-group"
+                      id="primary_c">Detalles</a>
                   </div>
                   <a href="#" id="success_c" class="btn btn-success">Agregar</a>
                 </div>
