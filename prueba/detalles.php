@@ -129,7 +129,33 @@ if ($id == '' || $token == '') {
         <div class="container">
             <div class="row">
                 <div class="col-md-6 order-md-1">
-                    <img id="imagen_a" src="<?php echo $rutaImg ?>">
+
+                    <div id="carouselImages" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img id="imagen_a" src="<?php echo $rutaImg ?>">
+                            </div>
+
+                            <?php foreach ($images as $imagen) { ?>
+                                <div class="carousel-item">
+                                    <img id="imagen_a" src="<?php echo $imagen ?>">
+                                </div>
+                            <?php } ?>
+
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselImages"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselImages"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+
                 </div>
                 <div class="col-md-6 order-md-2">
                     <h2>

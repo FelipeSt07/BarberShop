@@ -99,3 +99,6 @@ INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('gel','que ben
 INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('crema','que bendicionx2','2000')
 #Modificacion 15:30 21/02/2023
 ALTER TABLE `producto` ADD descuento TINYINT(3) default 0;
+
+#Modificacion 23:27 04/03/2023
+ALTER TABLE `producto` CHANGE `descripcion` `descripcion` TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
