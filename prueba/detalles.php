@@ -36,14 +36,16 @@ if ($id == '' || $token == '') {
             }
 
             $images = array();
-            $dir = dir($dir_images);
+            if (file_exists($dir_images)) {
+                $dir = dir($dir_images);
 
-            while (($archivo = $dir->read()) != false) {
-                if ($archivo != 'principal.png' && (strpos($archivo, 'jpg')) || (strpos($archivo, 'png'))) {
+                while (($archivo = $dir->read()) != false) {
+                    if ($archivo != 'principal.png' && (strpos($archivo, 'jpg')) || (strpos($archivo, 'png'))) {
                     $images[] = $dir_images . $archivo;
+                    }
                 }
+                $dir->close();
             }
-            $dir->close();
         } else {
             echo 'Error al procesar la petición';
             exit;
