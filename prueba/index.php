@@ -1,5 +1,6 @@
 <?php
 include("config/conexion.php");
+require 'config/config.php';
 ?>
 
 
@@ -39,13 +40,17 @@ include("config/conexion.php");
                     <a href="Productos.php" id="oculto"><i class="fa-solid fa-bag-shopping"></i>Productos</a>
                 </div>
                 <div class="div barra">
-                    <a href="" id="oculto"><i class="fa-solid fa-scissors"></i>Servicios</a>
+                    <a href="servicios.php" id="oculto"><i class="fa-solid fa-scissors"></i>Servicios</a>
                 </div>
                 <div class="div barra">
                     <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
                 </div>
                 <div class="div">
-                    <a href="FormLogin.php" id="oculto"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="carrito.php" id="oculto"><i class="fa-solid fa-cart-shopping"></i>
+                        <span id="num_cart" class="badge bg-secondary">
+                            <?php echo $num_cart; ?>
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -55,7 +60,7 @@ include("config/conexion.php");
                 <div class="categorias">
                     <a href="FormLogin.php">Iniciar Sesion</a>
                     <a href="Productos.php">Productos</a>
-                    <a href="#">Servicios</a>
+                    <a href="servicios.php">Servicios</a>
                 </div>
             </div>
         </div>
@@ -182,10 +187,41 @@ include("config/conexion.php");
     </section>
 
     <footer>
-        <section>
-            <a href="#titulo">Ir al comienzo</a>
-        </section>
-        <p>Copyright 2023</p>
+        <div class="cont-footer">
+
+            <div class="colum-footer">
+                <h3>Contactos</h3><br>
+                <p>Pasto, Nariño, Colombia</p>
+                <div class="foo">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+57 3224823651</p>
+                </div>
+                <div class="foo">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>jhquebendicion@gmail.com</p>
+                </div>
+
+            </div>
+            <div class="colum-footer">
+                <h3>Menu</h3><br>
+                <a href="productos.php">Productos</a><br>
+                <a href="servicios.php">Servicios</a><br>
+                <a href="FormLogin.php">Iniciar Sesion</a>
+
+            </div>
+            <div id="none" class="colum-footer">
+                <br>
+                <br>
+                <a href="index.php">Ir al comienzo</a>
+                <i class="fa-solid fa-arrow-up"></i>
+                <br>
+                <br>
+            </div>
+
+
+        </div>
+
+
     </footer>
 
 

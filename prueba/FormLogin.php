@@ -51,7 +51,7 @@
                 <div class="categorias">
                     <a href="FormLogin.php">Iniciar Sesion</a>
                     <a href="Productos.php">Productos</a>
-                    <a href="#">Servicios</a>
+                    <a href="servicios.php">Servicios</a>
                 </div>
             </div>
         </div>

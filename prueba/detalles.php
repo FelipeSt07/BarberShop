@@ -1,7 +1,7 @@
 <?php
 
-include("config/config.php");
-include("config/conexion.php");
+include('config/config.php');
+include('config/conexion.php');
 $conexion = conectar();
 
 $id = isset($_GET['id']) ? $_GET['id'] : '';
@@ -92,13 +92,17 @@ if ($id == '' || $token == '') {
                     <a href="Productos.php" id="oculto"><i class="fa-solid fa-bag-shopping"></i>Productos</a>
                 </div>
                 <div class="div barra">
-                    <a href="" id="oculto"><i class="fa-solid fa-scissors"></i>Servicios</a>
+                    <a href="servicios.php" id="oculto"><i class="fa-solid fa-scissors"></i>Servicios</a>
                 </div>
                 <div class="div barra">
                     <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
                 </div>
                 <div class="div">
-                    <a href="FormLogin.php" id="oculto"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="checkout.php" id="oculto"><i class="fa-solid fa-cart-shopping"></i>
+                        <span id="num_cart" class="badge bg-secondary">
+                            <?php echo $num_cart; ?>
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -108,7 +112,7 @@ if ($id == '' || $token == '') {
                 <div class="categorias">
                     <a id="oculto_a" href="login.php">Iniciar Sesion</a>
                     <a id="oculto_a" href="productos.php">Productos</a>
-                    <a id="oculto_a" href="#">Servicios</a>
+                    <a id="oculto_a" href="servicios.php">Servicios</a>
                 </div>
             </div>
         </div>
@@ -168,9 +172,15 @@ if ($id == '' || $token == '') {
                         <?php echo $descripcion; ?>
                     </p>
 
+                    <div class="col-3 my-3">
+                        Cantidad: <input class="form-control" id="cantidad" name="cantidad" type="number"
+                        min="1" max="10" value="1">
+                    </div>
+
                     <div class="d-grid gap-3 col-10">
                         <button id="primary_c" class="btn btn-primary" type="button">Comprar Ahora</button>
-                        <button id="success_c" class="btn btn-outline-primary" type="button">Agregar al carrito</button>
+                        <button id="success_c" class="btn btn-outline-primary" type="button" onclick="addProducto(<?php echo $id; ?>,
+                         cantidad.value, '<?php echo $token_tmp; ?>')">Agregar al carrito</button>
                     </div>
 
                 </div>
@@ -181,7 +191,7 @@ if ($id == '' || $token == '') {
 
     <footer>
         <section>
-            <a href="index.php">Ir al comienzo</a>
+            <a href="detalles.php">Ir al comienzo</a>
         </section>
         <p>Copyright 2023</p>
     </footer>
@@ -191,6 +201,31 @@ if ($id == '' || $token == '') {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-</body>
 
-</html>
+    <script>
+        function addProducto(id, cantidad, token) {
+            let url = 'clases/carrito.php'
+            let formData = new FormData()
+            formData.append('id', id)
+            formData.append('cantidad', cantidad)
+            formData.append('token', token)
+
+            fetch(url, {
+                method: 'POST',
+                body: formData,
+                mode: 'cors'
+            }).then(response => response.json())
+                .then(data => {
+                    if (data.ok) {
+                        let elemento = document.getElementById("num_cart")
+                        elemento.innerHTML = data.numero
+                    }
+                })
+
+        }
+        </script>
+
+
+        </body>
+
+</html >

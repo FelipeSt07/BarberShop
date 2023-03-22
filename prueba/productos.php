@@ -47,13 +47,17 @@ $result = mysqli_query($conexion, $query);
           <a href="Productos.php" id="oculto"><i class="fa-solid fa-bag-shopping"></i>Productos</a>
         </div>
         <div class="div barra">
-          <a href="" id="oculto"><i class="fa-solid fa-scissors"></i>Servicios</a>
+          <a href="servicios.php" id="oculto"><i class="fa-solid fa-scissors"></i>Servicios</a>
         </div>
         <div class="div barra">
           <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
         </div>
         <div class="div">
-          <a href="FormLogin.php" id="oculto"><i class="fa-solid fa-cart-shopping"></i></a>
+          <a href="checkout.php" id="oculto"><i class="fa-solid fa-cart-shopping"></i>
+            <span id="num_cart" class="badge bg-secondary">
+              <?php echo $num_cart; ?>
+            </span>
+          </a>
         </div>
       </div>
     </div>
@@ -63,7 +67,7 @@ $result = mysqli_query($conexion, $query);
         <div class="categorias">
           <a id="oculto_a" href="FormLogin.php">Iniciar Sesion</a>
           <a id="oculto_a" href="productos.php">Productos</a>
-          <a id="oculto_a" href="#">Servicios</a>
+          <a id="oculto_a" href="servicios.php">Servicios</a>
         </div>
       </div>
     </div>
@@ -74,9 +78,9 @@ $result = mysqli_query($conexion, $query);
 
   <section class="text">
     <h1 id="titulo">PRODUCTOS</h1>
-    <!-- <p>Lograr que usted viva una experiencia desde su</p>
+        <p>Lograr que usted viva una experiencia desde su</p>
         <p>llegada hasta que se retira de nuestra Barbería,</p>
-        <p>es nuestro compromiso y objetivo.</p> -->
+        <p>es nuestro compromiso y objetivo.</p>
   </section>
 
   <!--Contenido-->
@@ -108,7 +112,9 @@ $result = mysqli_query($conexion, $query);
                          hash_hmac('sha1', $row['idproducto'], KEY_TOKEN); ?>" class="btn btn-group"
                       id="primary_c">Detalles</a>
                   </div>
-                  <a href="#" id="success_c" class="btn btn-success">Agregar</a>
+                  <a href="#" id="success_c" class="btn btn-success"
+                    onclick="addProducto
+                  (<?php echo $row['idproducto']; ?>, '<?php echo hash_hmac('sha1', $row['idproducto'], KEY_TOKEN); ?>')">Agregar</a>
                 </div>
               </div>
             </div>
@@ -121,7 +127,7 @@ $result = mysqli_query($conexion, $query);
 
   <footer>
     <section>
-      <a href="login.php">Ir al comienzo</a>
+      <a href="productos.php">Ir al comienzo</a>
     </section>
     <p>Copyright 2023</p>
   </footer>
@@ -134,6 +140,27 @@ $result = mysqli_query($conexion, $query);
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 
+  <script>
+    function addProducto(id, token) {
+      let url = 'clases/carrito.php'
+      let formData = new FormData()
+      formData.append('id', id)
+      formData.append('token', token)
+
+      fetch(url, {
+        method: 'POST',
+        body: formData,
+        mode: 'cors'
+      }).then(response => response.json())
+        .then(data => {
+          if (data.ok) {
+            let elemento = document.getElementById("num_cart")
+            elemento.innerHTML = data.numero
+          }
+        })
+
+    }
+  </script>
 
 
 </body>

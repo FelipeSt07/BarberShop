@@ -438,6 +438,42 @@ footer a {
     text-decoration: none;
 }
 
+.cont-footer {
+    column-count: 3;
+    text-align: center;
+    column-gap: 10px;
+}
+
+.foo {
+    display: flex;
+    justify-content: center;
+}
+.foo i {
+    margin-right: 5px;
+}
+
+@media (max-width:820px) {
+    .cont-footer {
+        flex-flow: column-reverse;
+    }
+    .colum-footer {
+        margin-bottom: 10px;
+    }
+
+}
+
+@media (max-width:375px) {
+    .cont-footer {
+        column-count: 1;
+    }
+    #none {
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+}
 /*-----------------*/
 /*      SLIDER     */
 /*-----------------*/
