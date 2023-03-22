@@ -11,7 +11,7 @@ CREATE TABLE `usuarioext` (
   `email` varchar(50) NOT NULL,
   `estado` int(1) DEFAULT 1
 );
-#TABLA USUARIOS EXTERNOS
+#TABLA USUARIOS REGISTRADOS
 CREATE TABLE `usuarioreg` (
   `cedula` varchar(20) PRIMARY KEY,
   `nombre` varchar(50) NOT NULL,
@@ -21,14 +21,16 @@ CREATE TABLE `usuarioreg` (
   `telefono` varchar(10) NOT NULL,
   `email` varchar(50) NOT NULL,
   `clave` varchar(256) NOT NULL,
-  `estado` int(1) DEFAULT 1
+  `estado` int(1) DEFAULT 1,
+  `roll` int(1) DEFAULT 0
 );
 #TABLA SERVICIO
 CREATE TABLE `servicio` (
   `idservicio` char(3) PRIMARY KEY,
   `nombre` varchar(50) NOT NULL,
   `descripcion` varchar(100) NOT NULL,
-  `precio` int NOT NULL
+  `precio` int NOT NULL,
+  `descuento` TINYINT(3) DEFAULT 0;
 );
 #TABLA PRODUCTO
 CREATE TABLE `producto` (
@@ -85,11 +87,9 @@ ALTER TABLE `carrito` ADD FOREIGN KEY (`usuario`) REFERENCES `usuarioreg` (`cedu
 ALTER TABLE `c_producto` ADD FOREIGN KEY (`carrito`) REFERENCES `carrito` (`idcarrito`);
 ALTER TABLE `c_producto` ADD FOREIGN KEY (`producto`) REFERENCES `producto` (`idproducto`);
 ALTER TABLE `factura` ADD FOREIGN KEY (`formapago`) REFERENCES `formapago` (`idformapago`);
-#Modificacion tabla usuarioreg 19/02->10:29am
-ALTER TABLE `usuarioreg` ADD roll boolean default 0;
 #insercion usuario de prueba
-INSERT INTO `usuarioreg`(`cedula`, `p_nombre`, `s_nombre`, `p_apellido`, `s_apellido`, `fechanac`, `direccion`, `username`, `telefono`, `email`, `clave`) VALUES ('1004597149','Jhon','Hector','Roque','Males','2002-10-28','Funes','jh777','317869','jhon@gmail.com','827ccb0eea8a706c4c34a16891f84e7b')
-INSERT INTO `usuarioreg`(`cedula`, `p_nombre`, `s_nombre`, `p_apellido`, `s_apellido`, `fechanac`, `direccion`, `username`, `telefono`, `email`, `clave`) VALUES ('1004','Luis','Felipe','Santacruz','Chinchajoa','2002-8-30','Pasto','felipest','313987','felipe@gmail.com','827ccb0eea8a706c4c34a16891f84e7b')
+INSERT INTO `usuarioreg`(`cedula`, `nombre`, `apellido`, `fechanac`, `usuario`, `telefono`, `email`, `clave`) VALUES ('1004597149','Jhon','Roque','2002-10-28','jh777','317869','jhon@gmail.com','827ccb0eea8a706c4c34a16891f84e7b')
+INSERT INTO `usuarioreg`(`cedula`, `nombre`, `apellido`, `fechanac`, `usuario`, `telefono`, `email`, `clave`) VALUES ('1004','Felipe','Santacruz','2002-8-30','felipest','313987','felipe@gmail.com','827ccb0eea8a706c4c34a16891f84e7b')
 #insercion productos
 INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('gel','que bendicion','1000')
 INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('crema','que bendicionx2','2000')
@@ -97,8 +97,6 @@ INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('gel','que ben
 INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('crema','que bendicionx2','2000')
 INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('gel','que bendicion','1000')
 INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('crema','que bendicionx2','2000')
-#Modificacion 15:30 21/02/2023
-ALTER TABLE `producto` ADD descuento TINYINT(3) default 0;
 
 #Modificacion 23:27 04/03/2023
 ALTER TABLE `producto` CHANGE `descripcion` `descripcion` TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
