@@ -13,7 +13,7 @@ $result = mysqli_query($conexion, $query);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilospro.css">
+    <link rel="stylesheet" href="css/estilosser.css">
     <link rel="shortcut icon" href="imagenes/barber-shop.svg">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -89,38 +89,44 @@ $result = mysqli_query($conexion, $query);
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img src="imagenes/fondo.jpg">
-                        <div class="card-body">
+                        <img src="imagenes/pexels1.jpg">
+                        <div id="h5" class="card-body">
                             <h5 class="card-title">Peluqueria</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.</p>
-                            
+                            <p class="card-text">Corte realizado por maestros en barbería, capacitados en cortes
+                                clásicos y modernos, el servicio incluye: asesoramiento de imagen y lavado.</p>
+
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img src="imagenes/fondo.jpg">
-                        <div class="card-body">
-                            <h5 class="card-title">Peluqueria</h5>
-                            <p class="card-title">This is a wider card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.</p>
-                            
+                        <img src="imagenes/pexels3.jpg">
+                        <div id="h5" class="card-body">
+                            <h5 class="card-title">Ritual de barba</h5>
+                            <p class="card-title">Ritual con toalla caliente y fría, afeitado tradicional con barbera y
+                                uso de productos previos y posteriores al afeitado para el cuidado de la barba.</p>
+
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img src="imagenes/fondo.jpg">
-                        <div class="card-body">
-                            <h5 class="card-title">Peluqueria</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.</p>
-                            
+                        <img src="imagenes/pexels2.jpg">
+                        <div id="h5" class="card-body">
+                            <h5 class="card-title">Spa facial</h5>
+                            <p class="card-text">Spa facial completo; Servicio premium de exfoliación, mascarilla
+                                dorada, fototerapia, colágeno, hidratación facial y puede incluir depilación con cera.
+                            </p>
+
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="pago-ser" class="col-md-5- d-grid gap-2">
+            <a href="https://walink.co/0efe65" target="_blank" id="primary_c" class="btn btn-primary btn-lg">RESERVAR CITA</a>
+            <br>
+            <br>
         </div>
     </main>
 

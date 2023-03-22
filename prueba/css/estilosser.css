@@ -586,6 +586,14 @@ footer a {
     border-color: #414141;
 }
 
+#h5{
+    text-align: center;
+}
+/*
+#pago-ser {
+    justify-content: center;
+}
+*/
 @media (max-width:820px) {
 
     #imagen_a {

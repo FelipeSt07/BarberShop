@@ -41,7 +41,7 @@ if ($id == '' || $token == '') {
 
                 while (($archivo = $dir->read()) != false) {
                     if ($archivo != 'principal.png' && (strpos($archivo, 'jpg')) || (strpos($archivo, 'png'))) {
-                    $images[] = $dir_images . $archivo;
+                        $images[] = $dir_images . $archivo;
                     }
                 }
                 $dir->close();
@@ -151,13 +151,13 @@ if ($id == '' || $token == '') {
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselImages"
                             data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
+                            <span id="control" class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span id="control" class="visually-hidden">Previous</span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#carouselImages"
                             data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
+                            <span id="control" class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span id="control" class="visually-hidden">Next</span>
                         </button>
                     </div>
 
@@ -175,8 +175,8 @@ if ($id == '' || $token == '') {
                     </p>
 
                     <div class="col-3 my-3">
-                        Cantidad: <input class="form-control" id="cantidad" name="cantidad" type="number"
-                        min="1" max="10" value="1">
+                        Cantidad: <input class="form-control" id="cantidad" name="cantidad" type="number" min="1"
+                            max="10" value="1">
                     </div>
 
                     <div class="d-grid gap-3 col-10">
@@ -225,9 +225,9 @@ if ($id == '' || $token == '') {
                 })
 
         }
-        </script>
+    </script>
 
 
-        </body>
+</body>
 
-</html >
+</html>
