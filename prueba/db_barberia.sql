@@ -17,7 +17,7 @@ CREATE TABLE `usuarioreg` (
   `nombre` varchar(50) NOT NULL,
   `apellido` varchar(50) NOT NULL,
   `fechanac` DATE NOT NULL,
-  `usuario` varchar(100) NOT NULL UNIQUE;
+  `usuario` varchar(100) NOT NULL UNIQUE,
   `telefono` varchar(10) NOT NULL,
   `email` varchar(50) NOT NULL,
   `clave` varchar(256) NOT NULL,
@@ -29,8 +29,7 @@ CREATE TABLE `servicio` (
   `idservicio` char(3) PRIMARY KEY,
   `nombre` varchar(50) NOT NULL,
   `descripcion` varchar(100) NOT NULL,
-  `precio` int NOT NULL,
-  `descuento` TINYINT(3) DEFAULT 0;
+  `precio` int NOT NULL
 );
 #TABLA PRODUCTO
 CREATE TABLE `producto` (
@@ -38,7 +37,8 @@ CREATE TABLE `producto` (
   `nombre` varchar(50) NOT NULL,
   `descripcion` varchar(160) not NULL,
   `precio` double NOT NULL,
-  `estado` int(1) DEFAULT 1
+  `estado` int(1) DEFAULT 1,
+  `descuento` TINYINT(3) DEFAULT 0
 );
 #TABLA DESCRIPCION PRODUCTO
 CREATE TABLE `c_producto` (
@@ -88,15 +88,15 @@ ALTER TABLE `c_producto` ADD FOREIGN KEY (`carrito`) REFERENCES `carrito` (`idca
 ALTER TABLE `c_producto` ADD FOREIGN KEY (`producto`) REFERENCES `producto` (`idproducto`);
 ALTER TABLE `factura` ADD FOREIGN KEY (`formapago`) REFERENCES `formapago` (`idformapago`);
 #insercion usuario de prueba
-INSERT INTO `usuarioreg`(`cedula`, `nombre`, `apellido`, `fechanac`, `usuario`, `telefono`, `email`, `clave`) VALUES ('1004597149','Jhon','Roque','2002-10-28','jh777','317869','jhon@gmail.com','827ccb0eea8a706c4c34a16891f84e7b')
-INSERT INTO `usuarioreg`(`cedula`, `nombre`, `apellido`, `fechanac`, `usuario`, `telefono`, `email`, `clave`) VALUES ('1004','Felipe','Santacruz','2002-8-30','felipest','313987','felipe@gmail.com','827ccb0eea8a706c4c34a16891f84e7b')
+INSERT INTO `usuarioreg`(`cedula`, `nombre`, `apellido`, `fechanac`, `usuario`, `telefono`, `email`, `clave`) VALUES ('1004597149','Jhon','Roque','2002-10-28','jh777','317869','jhon@gmail.com','827ccb0eea8a706c4c34a16891f84e7b');
+INSERT INTO `usuarioreg`(`cedula`, `nombre`, `apellido`, `fechanac`, `usuario`, `telefono`, `email`, `clave`) VALUES ('1004','Felipe','Santacruz','2002-8-30','felipest','313987','felipe@gmail.com','827ccb0eea8a706c4c34a16891f84e7b');
 #insercion productos
-INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('gel','que bendicion','1000')
-INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('crema','que bendicionx2','2000')
-INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('gel','que bendicion','1000')
-INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('crema','que bendicionx2','2000')
-INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('gel','que bendicion','1000')
-INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('crema','que bendicionx2','2000')
+INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('Hair Wash','Shampoo para fortalecimiento capilar','6000');
+INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('Regrowe Plus','Balsamo para crecimiento de barba','10000');
+INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('Shampoo Reuzel','Shampoo diario hidratante ','8000');
+INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('Skin Cleaner','Limpiador facial liquido','5000');
+INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('Kit de peines','Peines basicos para barberia','15000');
+INSERT INTO `producto`(`nombre`, `descripcion`, `precio`) VALUES ('Maquina Wahl','Maquina especial para cortes de pelo','100000');
 
 #Modificacion 23:27 04/03/2023
 ALTER TABLE `producto` CHANGE `descripcion` `descripcion` TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
