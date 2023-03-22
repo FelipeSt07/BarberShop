@@ -1,6 +1,6 @@
 <?php
-include("config/conexion.php");
-require 'config/config.php';
+include('config/conexion.php');
+require('config/config.php');
 ?>
 
 
