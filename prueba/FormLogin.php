@@ -35,13 +35,13 @@
                     <a href="Productos.php" id="oculto"><i class="fa-solid fa-bag-shopping"></i>Productos</a>
                 </div>
                 <div class="div barra">
-                    <a href="" id="oculto"><i class="fa-solid fa-scissors"></i>Servicios</a>
+                    <a href="servicios.php" id="oculto"><i class="fa-solid fa-scissors"></i>Servicios</a>
                 </div>
-                <div class="div barra">
-                    <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
+                <div class="div barra">                
+                    <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>     
                 </div>
                 <div class="div">
-                    <a href="FormLogin.php" id="oculto"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="checkout.php" id="oculto"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
             </div>
         </div>

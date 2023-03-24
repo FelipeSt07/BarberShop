@@ -68,7 +68,12 @@ if ($productos != null) {
                     <a href="" id="oculto"><i class="fa-solid fa-scissors"></i>Servicios</a>
                 </div>
                 <div class="div barra">
-                    <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
+                    <?php if (isset($_SESSION['username'])) { ?>
+                        <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i> <?php echo $_SESSION
+                        ['username']; ?></a>
+                    <?php } else { ?>
+                        <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
+                    <?php } ?>      
                 </div>
                 <div class="div">
                     <a href="carrito.php" id="oculto"><i class="fa-solid fa-cart-shopping"></i>

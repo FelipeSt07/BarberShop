@@ -50,7 +50,23 @@ $result = mysqli_query($conexion, $query);
                     <a href="servicios.php" id="oculto"><i class="fa-solid fa-scissors"></i>Servicios</a>
                 </div>
                 <div class="div barra">
-                    <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
+                    <?php if (isset($_SESSION['username'])) { ?>
+
+                        <div class="dropdown">
+                            <button class="btn btn-sm " type="button" id="btn_session"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <a href="#" id="oculto"><i class="fa-regular fa-circle-user"></i>
+                                    <?php echo $_SESSION['username']; ?>
+                                </a>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="btn_session">
+                                <li><a class="dropdown-item" href="logout.php">Cerrar sesión</a></li>
+                            </ul>
+                        </div>
+
+                    <?php } else { ?>
+                        <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
+                    <?php } ?>
                 </div>
                 <div class="div">
                     <a href="checkout.php" id="oculto"><i class="fa-solid fa-cart-shopping"></i>

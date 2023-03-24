@@ -50,8 +50,24 @@ $result = mysqli_query($conexion, $query);
           <a href="servicios.php" id="oculto"><i class="fa-solid fa-scissors"></i>Servicios</a>
         </div>
         <div class="div barra">
-          <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
-        </div>
+                    <?php if (isset($_SESSION['username'])) { ?>
+
+                        <div class="dropdown">
+                            <button class="btn btn-sm " type="button" id="btn_session"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <a href="#" id="oculto"><i class="fa-regular fa-circle-user"></i>
+                                    <?php echo $_SESSION['username']; ?>
+                                </a>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="btn_session">
+                                <li><a class="dropdown-item" href="logout.php">Cerrar sesión</a></li>
+                            </ul>
+                        </div>
+
+                    <?php } else { ?>
+                        <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
+                    <?php } ?>
+                </div>
         <div class="div">
           <a href="checkout.php" id="oculto"><i class="fa-solid fa-cart-shopping"></i>
             <span id="num_cart" class="badge bg-secondary">
@@ -78,9 +94,9 @@ $result = mysqli_query($conexion, $query);
 
   <section class="text">
     <h1 id="titulo">PRODUCTOS</h1>
-        <p>Lograr que usted viva una experiencia desde su</p>
-        <p>llegada hasta que se retira de nuestra Barbería,</p>
-        <p>es nuestro compromiso y objetivo.</p>
+    <p>Lograr que usted viva una experiencia desde su</p>
+    <p>llegada hasta que se retira de nuestra Barbería,</p>
+    <p>es nuestro compromiso y objetivo.</p>
   </section>
 
   <!--Contenido-->

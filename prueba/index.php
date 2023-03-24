@@ -47,10 +47,15 @@ $result = mysqli_query($conexion, $query);
                     <a href="servicios.php" id="oculto"><i class="fa-solid fa-scissors"></i>Servicios</a>
                 </div>
                 <div class="div barra">
-                    <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
+                    <?php if (isset($_SESSION['username'])) { ?>
+                        <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i> <?php echo $_SESSION
+                        ['username']; ?></a>
+                    <?php } else { ?> 
+                        <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
+                    <?php } ?>
                 </div>
                 <div class="div">
-                    <a href="carrito.php" id="oculto"><i class="fa-solid fa-cart-shopping"></i>
+                    <a href="checkout.php" id="oculto"><i class="fa-solid fa-cart-shopping"></i>
                         <span id="num_cart" class="badge bg-secondary">
                             <?php echo $num_cart; ?>
                         </span>
@@ -58,6 +63,7 @@ $result = mysqli_query($conexion, $query);
                 </div>
             </div>
         </div>
+	</div>
 
         <div class="contenedor contenedor-grid">
             <div class="grid" id="grid">
