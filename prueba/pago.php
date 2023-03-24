@@ -69,14 +69,25 @@ if ($productos != null) {
                 </div>
                 <div class="div barra">
                     <?php if (isset($_SESSION['username'])) { ?>
-                        <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i> <?php echo $_SESSION
-                        ['username']; ?></a>
+
+                        <div class="dropdown">
+                            <button class="btn btn-sm " type="button" id="btn_session" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <a href="#" id="oculto"><i class="fa-regular fa-circle-user"></i>
+                                    <?php echo $_SESSION['username']; ?>
+                                </a>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="btn_session">
+                                <li><a class="dropdown-item" href="logout.php">Cerrar sesión</a></li>
+                            </ul>
+                        </div>
+
                     <?php } else { ?>
                         <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
-                    <?php } ?>      
+                    <?php } ?>
                 </div>
                 <div class="div">
-                    <a href="carrito.php" id="oculto"><i class="fa-solid fa-cart-shopping"></i>
+                    <a href="checkout.php" id="oculto"><i class="fa-solid fa-cart-shopping"></i>
                         <span id="num_cart" class="badge bg-secondary">
                             <?php echo $num_cart; ?>
                         </span>
@@ -108,7 +119,7 @@ if ($productos != null) {
 
     <!--Contenido-->
     <main>
-    
+
         <div class="container">
 
             <div class="row">
@@ -178,7 +189,7 @@ if ($productos != null) {
         </div>
 
 
-       
+
     </main>
 
 
@@ -199,47 +210,47 @@ if ($productos != null) {
         crossorigin="anonymous"></script>
 
     <script>
-            paypal.Buttons({
-                style: {
-                    color: 'blue',
-                    shape: 'pill',
-                    label: 'pay'
-                },
-                createOrder: function (data, actions) {
-                    return actions.order.create({
-                        purchase_units: [{
-                            amount: {
-                                value: <?php echo $total; ?>
-                            }
-                        }]
-                    })
-                },
+        paypal.Buttons({
+            style: {
+                color: 'blue',
+                shape: 'pill',
+                label: 'pay'
+            },
+            createOrder: function (data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: <?php echo $total; ?>
+                        }
+                    }]
+                })
+            },
 
-                onApprove: function(data, actions){
-                    let URL = 'clases/captura.php'
-                    actions.order.capture().then(function (detalles){
+            onApprove: function (data, actions) {
+                let URL = 'clases/captura.php'
+                actions.order.capture().then(function (detalles) {
 
-                        console.log(detalles);
+                    console.log(detalles);
 
-                        return fetch(url, {
-                            method: 'post',
-                            headers: {
-                                'content-type': 'application/json'
-                            },
-                            body: JSON.stringify({
-                                detalles: detalles
-                            })
+                    return fetch(url, {
+                        method: 'post',
+                        headers: {
+                            'content-type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            detalles: detalles
                         })
+                    })
 
-                        //window.location.href="productos.php"
-                    });
-                },
+                    //window.location.href="productos.php"
+                });
+            },
 
-                onCancel: function(data){
-                    alert("Pago Cancelado");
-                }
-            }).render('#paypal-button-container');
-        </script>                                    
+            onCancel: function (data) {
+                alert("Pago Cancelado");
+            }
+        }).render('#paypal-button-container');
+    </script>
 
 
 </body>

@@ -48,7 +48,7 @@ $result = mysqli_query($conexion, $query);
                 </div>
                 <div class="div barra">
                     <?php if (isset($_SESSION['username'])) { ?>
-                        <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i> <?php echo $_SESSION
+                        <a href="#" id="oculto"><i class="fa-regular fa-circle-user"></i> <?php echo $_SESSION
                         ['username']; ?></a>
                     <?php } else { ?> 
                         <a href="FormLogin.php" id="oculto"><i class="fa-regular fa-circle-user"></i>Iniciar Sesion</a>
